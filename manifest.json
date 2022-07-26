@@ -1,0 +1,30 @@
+{
+	"name": "Kertbirodalom Asszisztens",
+	"description": "A workaround for pay-to-play features",
+	"version": "1.0",
+	"manifest_version": 3,
+	"permissions": ["scripting"],
+	"content_scripts": [{
+		"matches": ["*://*.kertbirodalom.hu/*"],
+		"js": [
+			"settings.js",
+			"main.js"
+		]
+	}],
+	"host_permissions": ["<all_urls>"],
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+		"16": "/images/kertbirodalom16.png",
+		"32": "/images/kertbirodalom32.png",
+		"48": "/images/kertbirodalom48.png",
+		"128": "/images/kertbirodalom128.png"
+		}
+	},
+	"icons": {
+		"16": "/images/kertbirodalom16.png",
+		"32": "/images/kertbirodalom32.png",
+		"48": "/images/kertbirodalom48.png",
+		"128": "/images/kertbirodalom128.png"
+	}
+}
