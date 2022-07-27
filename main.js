@@ -101,6 +101,7 @@ const sendAllRequest = (settings, urlParams) => {
 }
 
 const main = () => {
+    showUI();
     const settings = getSettings();
     const fields = getFields();
     const vegetables = getVegetables();

@@ -8,6 +8,9 @@
 		"matches": ["*://*.kertbirodalom.hu/*"],
 		"js": [
 			"settings.js",
+			"events.js",
+			"selector-ui.js",
+			"main-ui.js",
 			"main.js"
 		]
 	}],
