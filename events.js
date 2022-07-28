@@ -1,3 +1,0 @@
-const selectVegetableOnClick = () => {
-    showSelectorUi();
-}

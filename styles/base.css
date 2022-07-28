@@ -1,0 +1,135 @@
+.popup-tile, .selector-tile {
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    width: 4rem;
+    background: linear-gradient(45deg, #ffffff05, #ffffff10 20%, #ffffff10 21%, #ffffff05);
+    backdrop-filter: blur(6px);
+    margin: .5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.2rem white;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: transparent;
+    text-shadow: 0 0 0.15rem #ffffffaa;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.popup-tile:hover, .popup-button:hover {
+    transform: scale(1.05);
+}
+
+.popup-button {
+    display: flex;
+    flex-direction: column;
+    height: 4rem;
+    background: linear-gradient(45deg, #ffffff01, #ffffff05 20%, #ffffff05 21%, #ffffff01);
+    backdrop-filter: blur(6px);
+    margin: .5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.2rem white;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    color: transparent;
+    text-shadow: 0 0 0.15rem #ffffffaa;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.popup-row {
+    display: flex;
+    flex-direction: row;
+    height: 5rem;
+}
+
+.main-popup {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: -35.25rem;
+    right: 3rem;
+    width: 20rem;
+    height: 40rem;
+    padding: .5rem;
+    background: linear-gradient(45deg, #ffffff15, #ffffff30 20%, #ffffff30 21%, #ffffff15);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.2rem white;
+    cursor: default;
+    transition: all .3s;
+}
+
+#popup-selector {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    bottom: 3rem;
+    left: 3rem;
+    width: 20rem;
+    height: 40rem;
+    padding: .5rem;
+    background: linear-gradient(45deg, #ffffff15, #ffffff30 20%, #ffffff30 21%, #ffffff15);
+    backdrop-filter: blur(6px);
+    z-index: 100;
+    border-radius: 1rem;
+    box-shadow: 0 0 0.2rem white;
+    cursor: default;
+}
+
+#display-toggle {
+    transform: rotate(180deg);
+    transition: all .3s;
+}
+
+.selector-content {
+    height: 30rem;
+    border-bottom: 0.1rem solid #ffffff70;
+}
+
+.selector-tile-image {
+    border-radius: .5rem;
+}
+
+.slider {
+    margin-bottom: .5rem;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 1.5rem;
+    background: #d3d3d325;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    border-radius: .5rem;
+}
+  
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #ffffff63;
+    cursor: pointer;
+    border-radius: .5rem;
+}
+
+.popup-slider-container {
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider-counter {
+    font-size: x-large;
+}

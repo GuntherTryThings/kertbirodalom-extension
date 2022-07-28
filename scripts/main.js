@@ -20,7 +20,7 @@ const getFields = () => {
     }
 }
 
-const getVegetables = () => {
+const getVegetables = (sort = true) => {
     let vegetableElements = document.querySelectorAll('.regalItem');
     let vegetables = [];
 
@@ -31,14 +31,16 @@ const getVegetables = () => {
         })
     }
 
-    // Sorting the vegetables by count
-    vegetables.sort((a, b) => {
-        if (a.count < b.count)
-            return -1;
-        else if (a.count > b.count)
-            return 1;
-        return 0;
-    });
+    if(sort) {
+        // Sorting the vegetables by count
+        vegetables.sort((a, b) => {
+            if (a.count < b.count)
+                return -1;
+            else if (a.count > b.count)
+                return 1;
+            return 0;
+        });
+    }
 
     return vegetables;
 }
@@ -107,8 +109,6 @@ const main = () => {
     const vegetables = getVegetables();
     const urlParams = forgeUrls(vegetables, fields);
     const requestCount = sendAllRequest(settings, urlParams) + 1;
-
-    console.log(urlParams)
 
     if(requestCount > 1) {
         console.log(`All request will be sent after ${(requestCount * 300) / 1000} seconds`);

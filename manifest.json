@@ -7,11 +7,15 @@
 	"content_scripts": [{
 		"matches": ["*://*.kertbirodalom.hu/*"],
 		"js": [
-			"settings.js",
-			"events.js",
-			"selector-ui.js",
-			"main-ui.js",
-			"main.js"
+			"scripts/settings.js",
+			"scripts/selector-ui.js",
+			"scripts/main-ui.js",
+			"scripts/events.js",
+			"scripts/main.js"
+		],
+		"css": [
+			"styles/base.css",
+			"styles/overwrite.css"
 		]
 	}],
 	"host_permissions": ["<all_urls>"],
